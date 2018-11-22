@@ -29,7 +29,7 @@ string longestPalindrome(string s) {
                         --iter3Temp;
                     }else if(*iter2Temp != *iter3Temp) {
                         flag = 1;
-                        break;  //break终止理它最近的while、for
+                        break;  //break终止离它最近的while、for
                     }
                 }
                 
