@@ -17,7 +17,7 @@ string longestPalindrome(string s) {
         iLength.push_back(0);
 
         while(iter3 != s.end()) {
-            iter3 = find(iter3+1, s.end(), *iter3);
+            iter3 = find(iter3+1, s.end(), *iter3); //泛型算法find，定义在头文件algorithm
             if(iter3 != s.end()) {
                 auto iter2Temp = iter2;
                 auto iter3Temp = iter3;
@@ -29,7 +29,7 @@ string longestPalindrome(string s) {
                         --iter3Temp;
                     }else if(*iter2Temp != *iter3Temp) {
                         flag = 1;
-                        break;
+                        break;  //break终止理它最近的while、for
                     }
                 }
                 
@@ -50,7 +50,7 @@ string longestPalindrome(string s) {
         }
     }
     
-    string str(iter1 + maxi, iter1 + maxi + max+1); //使用迭代器初始化string对象
+    string str(iter1 + maxi, iter1 + maxi + max+1); //string对象初始化为迭代器指定范围中的元素的拷贝，但不包括第二个迭代器指向的元素
     return str;
 }
 /*end*/
