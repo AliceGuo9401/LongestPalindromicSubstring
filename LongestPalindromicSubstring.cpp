@@ -34,7 +34,7 @@ string longestPalindrome(string s) {
                 }
                 
                 if(flag == 0) {
-                    int length = iter3 - iter2;
+                    int length = iter3 - iter2; //iter2 + length = iter3
                     if(length > iLength[i])
                         iLength[i] = length;
                 }
@@ -50,7 +50,8 @@ string longestPalindrome(string s) {
         }
     }
     
-    string str(iter1 + maxi, iter1 + maxi + max+1); //string对象初始化为迭代器指定范围中的元素的拷贝，但不包括第二个迭代器指向的元素
+    string str(iter1 + maxi, iter1 + maxi + max + 1); //string对象初始化为迭代器指定范围中的元素的拷贝，但不包括第二个迭代器指向的元素
+                                                      //iter2、iter3指定范围的string
     return str;
 }
 /*end*/
