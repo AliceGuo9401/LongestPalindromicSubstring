@@ -55,7 +55,6 @@ string longestPalindrome(string s) {
     return str;
 }
 /*end*/
-
 int main() {
     string s("abcdefedcbag");
     string str = longestPalindrome(s);
